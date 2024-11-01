@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Saludo from "./Saludo";
+import Despedida from "./Despedida";
+import ListaCoches from './ListaCoches';
+
 
 function App() {
+ 
+  const mostrarSaludo = true; 
+  
+  const nombreUsuario = "Tania"; 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          // Si mostrarSaludo es true se ejecuta la primera parte antes de los dos puntos. De ser false, la segunda
+          {mostrarSaludo ? <Saludo nombre={nombreUsuario} /> : <Despedida nombre={nombreUsuario} />}
+          <ListaCoches/>
+      </div>
   );
 }
 

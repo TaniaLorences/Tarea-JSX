@@ -1,0 +1,8 @@
+# Ignora las carpetas de dependencias de Node.js
+node_modules/
+
+# Ignora los archivos de entorno
+.env
+
+# Ignora los archivos de construcción de producción
+build/
